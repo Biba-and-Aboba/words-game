@@ -1,11 +1,14 @@
 const express = require('express');
+const socket = require('socket.io');
 
 const app = express();
 const port = 3000;
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`Соеденение установлено на порту ${port} .`);
 });
+
+const io = socket(server);
 
 app.set('view engine', 'ejs');
 app.set('views', './client/views');
@@ -20,6 +23,10 @@ app.get ('/', (request, response) => {
 app.post ('/name', (request, response) => {
     const name = request.body.username;
     response.render('main.ejs', {name});
+});
+
+io.on('connect', (socket) => {
+    console.log('client connected');
 });
 
 
