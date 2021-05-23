@@ -8,10 +8,14 @@ app.listen(port, () => {
 });
 
 app.set('view engine', 'ejs');
-app.set('client', './client/views');
+app.set('views', './client/views');
 
 app.use(express.static('client'));
-app.use(url.encoded({extended: false}));
+app.use(express.urlencoded({extended: false}));
+
+app.get ('/', (request, response) => {
+    response.render('registration.ejs');
+});
 
 
 
