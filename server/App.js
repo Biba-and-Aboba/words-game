@@ -17,6 +17,9 @@ app.get ('/', (request, response) => {
     response.render('registration.ejs');
 });
 
-
+app.post ('/user', (request, response) => {
+    const name = req.body.username;
+    response.render('main.ejs', {name});
+});
 
 
