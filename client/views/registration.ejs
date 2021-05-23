@@ -8,14 +8,21 @@
   <title>Registration</title>
 </head>
 <body>
+  <div class="bg-image"></div>
   <div class="wrapper">
     <header>
       <h1>Города</h1>
     </header>
-    <form action="/name" method="POST">
-      <input type="text" name="username" placeholder="Введите имя">
-      <button type="submit">Отправить</button>
-    </form>
+    <main class="content">
+      <div class="content-title">
+        Регистрация
+      </div>
+      <form class="join-game" action="/name" method="POST">
+        <input type="text" name="username" placeholder="Введите имя">
+        <button type="submit">Отправить</button>
+      </form>
+    </main>
   </div>
+  <script src="/socket.io/socket.io.js"></script>
 </body>
 </html>
