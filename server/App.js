@@ -24,12 +24,12 @@ app.get ('/', (request, response) => {
 
 app.post ('/name', (request, response) => {
     const name = request.body.username;
-    createUser(name).then(user => console.log(user)).catch(e => console.log(e));
-    response.render('main.ejs', {name});
+    createUser(name).then(user => {
+        if (user._id )
+            response.render('main.ejs', {name});
+        }).catch(e => console.log(e));
 });
 
 io.on('connect', (socket) => {
     console.log('client connected');
 });
-
-
