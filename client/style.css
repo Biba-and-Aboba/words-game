@@ -38,6 +38,35 @@ button {
   border: 0;
 }
 
+button {
+  width: 300px;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: start;
+}
+
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer {
+  font-size: 20px;
+}
+
 .wrapper {
   width: 600px;
   margin: 0 auto;
@@ -68,4 +97,17 @@ button {
 
 input[type="text"] {
   margin-bottom: 15px;
+}
+
+.join-game__word {
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.alert-message {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  color: #fff;
 }

@@ -15,8 +15,23 @@
     </header>
     <main class="content">
       <div class="content-title">
-        <%=name%>
+        <div class="user-info">
+          <span id="timer" class="timer">Таймер</span>
+          <span class="user-name">
+            <%=name%>
+          </span>
+        </div>
+        <ul class="online-users" id="onlineUsers">
+          <li>User 1</li>
+          <li>User 2</li>
+        </ul>
       </div>
+      <form class="join-game">
+        <label id="word" class="join-game__word">Город</label>
+        <input type="text" name="inputWord" placeholder="Введите город" required autofocus>
+        <button>Отправить</button>
+      </form>
+      <div class="alert-message">Сообщение</div>
     </main>
   </div>
   </div>
