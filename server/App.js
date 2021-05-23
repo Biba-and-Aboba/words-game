@@ -1,6 +1,8 @@
 const express = require('express');
 const socket = require('socket.io');
 
+const {createUser} = require('./crud.js');
+
 const app = express();
 const port = 3000;
 
@@ -22,6 +24,7 @@ app.get ('/', (request, response) => {
 
 app.post ('/name', (request, response) => {
     const name = request.body.username;
+    createUser(name).then(user => console.log(user)).catch(e => console.log(e));
     response.render('main.ejs', {name});
 });
 
