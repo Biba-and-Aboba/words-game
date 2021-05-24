@@ -1,4 +1,3 @@
-const e = require('express');
 const express = require('express');
 const socket = require('socket.io');
 const messages = require('./messages.js');
